@@ -1,4 +1,4 @@
-// Task 1: Initialize inventory with product objects
+// Task 1: Create an Inventory Array of Product Objects
 let inventory = [
     {name: "tv", quantity: 15, price: 300, lowStockLevel: 5},
     {name: "toaster", quantity: 25, price: 45, lowStockLevel: 8},
@@ -6,3 +6,9 @@ let inventory = [
     {name: "phone", quantity: 20, price: 899, lowStockLevel: 6},
     {name: "laptop", quantity: 14, price: 700, lowStockLevel: 3}
 ]
+// Task 2: Create a Function to Display Product Details
+function display(product) {
+    const status = product.quantity <= product.lowStockLevel ? "Low Stock" : "In Stock" 
+    return `${product.name} is ${status}`
+}
+console.log(display(inventory[1]));
