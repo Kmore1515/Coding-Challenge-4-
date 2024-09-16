@@ -20,5 +20,10 @@ function updatestock(product, unitsSold) {
 }
 console.log(updatestock(inventory[2], 12));
 // Task 4: Create a Function to Check Low Stock Products
+function checkLowStock(inventory) {
+    let lowStockItems = [];
+    inventory.forEach(product => {if (product.quantity <= product.lowStockLevel)
+    lowStockItems.push(`${product.name} has low stock.`);
 
- 
+})};
+ return lowStockItems;
