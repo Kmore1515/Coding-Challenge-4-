@@ -14,10 +14,11 @@ function display(product) {
 console.log(display(inventory[1]));
 // Task 3: Create a Function to Update Product Stock After Sales
 function updatestock(product, unitsSold) {
-    product.quantity -= unitsSold;
-    const status = product.quantity <= 0 ? "out of stock" : "in stock";
-    return `${product.name} is ${status}`;
+     product.quantity -= unitsSold;
+     const newstatus = product.quantity <= 0 ? "out of stock" : "in stock"
+    return `${product.name} is ${newstatus}`;
 }
-
+console.log(updatestock(inventory[2], 12));
+// Task 4: Create a Function to Check Low Stock Products
 
  
